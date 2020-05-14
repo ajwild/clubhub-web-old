@@ -1,0 +1,9 @@
+*
+!components
+!pages
+!utils
+!.env
+!Dockerfile
+!next.config.js
+!package*.json
+!README.md
