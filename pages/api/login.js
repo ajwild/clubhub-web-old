@@ -1,12 +1,12 @@
-import commonMiddleware from '../../utils/middleware/commonMiddleware'
-import { verifyIdToken } from '../../utils/auth/firebaseAdmin'
+import commonMiddleware from '../../utils/middleware/common-middleware';
+import { verifyIdToken } from '../../utils/auth/firebase-admin';
 
-const handler = (req, res) => {
-  if (!req.body) {
-    return res.status(400)
+const handler = (request, response) => {
+  if (!request.body) {
+    return response.status(400);
   }
 
-  const { token } = req.body
+  const { token } = request.body;
 
   // Here, we decode the user's Firebase token and store it in a cookie. Use
   // express-session (or similar) to store the session data server-side.
@@ -21,17 +21,17 @@ const handler = (req, res) => {
   // it's possible Firebase's `verifySessionCookie` will make frequent network
   // requests in a serverless context.
   return verifyIdToken(token)
-    .then(decodedToken => {
-      req.session.decodedToken = decodedToken
-      req.session.token = token
-      return decodedToken
+    .then((decodedToken) => {
+      request.session.decodedToken = decodedToken;
+      request.session.token = token;
+      return decodedToken;
     })
-    .then(decodedToken => {
-      return res.status(200).json({ status: true, decodedToken })
+    .then((decodedToken) => {
+      return response.status(200).json({ status: true, decodedToken });
     })
-    .catch(error => {
-      return res.status(500).json({ error })
-    })
-}
+    .catch((error) => {
+      return response.status(500).json({ error });
+    });
+};
 
-export default commonMiddleware(handler)
+export default commonMiddleware(handler);

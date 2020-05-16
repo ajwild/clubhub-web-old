@@ -1,10 +1,10 @@
-import commonMiddleware from '../../utils/middleware/commonMiddleware'
+import commonMiddleware from '../../utils/middleware/common-middleware';
 
-const handler = (req, res) => {
+const handler = (request, response) => {
   // Destroy the session.
   // https://github.com/expressjs/cookie-session#destroying-a-session
-  req.session = null
-  res.status(200).json({ status: true })
-}
+  request.session = null;
+  response.status(200).json({ status: true });
+};
 
-export default commonMiddleware(handler)
+export default commonMiddleware(handler);

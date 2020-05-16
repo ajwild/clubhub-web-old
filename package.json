@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test": "xo"
   },
   "dependencies": {
     "cookie-session": "1.4.0",
@@ -18,5 +19,26 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-firebaseui": "4.1.0"
+  },
+  "devDependencies": {
+    "eslint-config-xo-react": "^0.23.0",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.2",
+    "xo": "^0.30.0"
+  },
+  "xo": {
+    "prettier": true,
+    "space": true,
+    "envs": [
+      "browser",
+      "node"
+    ],
+		"extends": [
+      "xo-react"
+    ]
+  },
+  "prettier": {
+    "bracketSpacing": true,
+    "trailingComma": "es5"
   }
 }
