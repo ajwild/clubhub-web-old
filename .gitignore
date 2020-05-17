@@ -1,8 +1,9 @@
+/.firebase
 /.next
 /.vscode
 /node_modules
+/public/_next/static
 .env*
 !.env*.example
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+*-debug.log*
+*-error.log*

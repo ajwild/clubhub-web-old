@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "**/.*"
+    ],
+    "rewrites": [ 
+      {
+        "source": "**",
+        "run": {
+          "serviceId": "clubhub-www",
+          "region": "us-central1" 
+        }
+      }
+    ]
+  }
+}

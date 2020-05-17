@@ -1,8 +1,11 @@
 *
-!components
-!pages
-!utils
+!/components
+!/pages
+!/public
+/public/_next/static
+!/utils
 !.env
+!.env.production
 !Dockerfile
 !next.config.js
 !package*.json
