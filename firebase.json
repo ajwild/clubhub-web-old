@@ -8,8 +8,8 @@
       {
         "source": "**",
         "run": {
-          "serviceId": "clubhub-www",
-          "region": "us-central1" 
+          "serviceId": "clubhub-web",
+          "region": "europe-west1" 
         }
       }
     ]

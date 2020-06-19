@@ -1,1 +1,1 @@
-# clubhub-www
+# clubhub-web
